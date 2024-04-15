@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Objects in HTML Table</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<table id="data-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Data will be dynamically added here -->
+  </tbody>
+</table>
+
+<script>
+  const events = [
+    { title: 'Event 1', date: '2024-04-08', location: 'Location 1' },
+    { title: 'Event 2', date: '2024-04-09', location: 'Location 2' },
+    { title: 'Event 3', date: '2024-04-10', location: 'Location 3' }
+  ];
+
+  const tbody = document.querySelector('#data-table tbody');
+
+  even.forEach(({ title, date, location }) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${title}</td>
+      <td>${date}</td>
+      <td>${location}</td>
+    `;
+    tbody.appendChild(row);
+  });
+</script>
+
+</body>
+</html>
